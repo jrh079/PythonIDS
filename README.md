@@ -31,6 +31,7 @@ These files represent current revisions, however I went though many iterations t
 
 Enjoy!!
 
-
+@author: James Harmon
+License Info: https://github.com/jrh079/PythonIDS/blob/add-license-1/LICENSE
 
 """

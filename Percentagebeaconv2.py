@@ -3,7 +3,8 @@
 """
 Created on Tue Apr  4 08:08:33 2023
 
-@author: kali
+@author: James Harmon
+License Info: https://github.com/jrh079/PythonIDS/blob/add-license-1/LICENSE
 """
 import csv
 

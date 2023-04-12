@@ -1,3 +1,8 @@
+"""
+@author: James Harmon
+License Info: https://github.com/jrh079/PythonIDS/blob/add-license-1/LICENSE
+"""
+
 import scapy.all as scapy
 import os
 import datetime

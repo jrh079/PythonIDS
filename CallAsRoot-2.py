@@ -3,7 +3,8 @@
 """
 Created on Tue Nov  1 12:02:23 2022
 Call Python File as Root (Option for not having to have user supply root pass)
-@author: kali
+@author: James Harmon
+License Info: https://github.com/jrh079/PythonIDS/blob/add-license-1/LICENSE
 """
 import subprocess
 import os

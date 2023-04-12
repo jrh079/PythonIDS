@@ -1,3 +1,7 @@
+"""
+@author: James Harmon
+License Info: https://github.com/jrh079/PythonIDS/blob/add-license-1/LICENSE
+"""
 import csv
 
 # Open CSV file

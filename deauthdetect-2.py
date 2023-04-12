@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 # -*- coding: utf-8 -*-
 """
-James Harmon - SHSU     April2023
+@author: James Harmon
+License Info: https://github.com/jrh079/PythonIDS/blob/add-license-1/LICENSE
 """
 
 

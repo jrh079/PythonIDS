@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar 31 12:33:37 2023
-
-@author: kali
+@author: James Harmon
+License Info: https://github.com/jrh079/PythonIDS/blob/add-license-1/LICENSE
 """
 import subprocess
 

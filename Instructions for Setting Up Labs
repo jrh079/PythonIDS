@@ -20,7 +20,7 @@ Use command "ifconfig" to determine your wireless interface
 Anaconda Navigator - Calls IDE programs
 python3 can call each module individually for testing, example python3 deauthdetect.py
 
-scapy can be loaded using pip install scapy or sudo cmd
+scapy can be loaded using "pip install scapy" or "sudo apt install scapy"
 
 
 

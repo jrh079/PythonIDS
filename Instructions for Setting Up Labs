@@ -20,6 +20,9 @@ I wanted to give some useful tips for success with setting up these labs for you
     AP, then you can monitor from a VM or Lab PC using the custom tools.  Armageddon allows you to quickly run deauths, beacon floods, and many others, to test 
     ARP spoof detection recomend using the arpspoof command line program.  
     command example "arpspoof -i <network adapter> -r -t <victim IP address> <gateway IP address>"
+    
+9.  If you want to try Command Line using Aircrack-ng this link has useful info on how to do it:
+    https://www.aircrack-ng.org/doku.php?id=cracking_wpa
 
 
 

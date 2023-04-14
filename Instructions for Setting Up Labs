@@ -1,0 +1,28 @@
+
+
+"""
+Hello all,
+
+I wanted to give some useful tips for success with setting up these labs for your own learning and testing purposes.  
+
+Kali Linux - Ultra Distrubution recomended, more pen test tools and software pre-loaded which is less setup work
+Install Spder or your favorite Python IDE
+Load Scapy Library for Packet Capture
+Install Wireshark (Kali Ultra includes)
+Install TShark (Kali Ultra includes)
+
+
+If your not using Kali you will want to load Aircrack-ng tools which are used for some modules.
+
+Tips:
+
+Use command "ifconfig" to determine your wireless interface
+Anaconda Navigator - Calls IDE programs
+python3 can call each module individually for testing, example python3 deauthdetect.py
+
+scapy can be loaded using pip install scapy or sudo cmd
+
+
+
+
+

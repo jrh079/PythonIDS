@@ -27,6 +27,10 @@ I wanted to give some useful tips for success with setting up these labs for you
 
 Adtl Tips:
 
+If Using Virtual Machine like Virtual Box, I found that only a USB wireless device will work for monitor mode / packet.  If running native hardware this should
+not be a problem.  I used an AWUS1900 which worked great.  The Pen Test hardware can be a spare laptop, desktop with wireless adapter etc.  Recomend using Kali for
+this as well since you will have many tools readily availble.  
+
 Use command "ifconfig" to determine your wireless interface
 
 Anaconda Navigator - Calls IDE programs

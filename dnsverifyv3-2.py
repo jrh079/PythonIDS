@@ -18,7 +18,7 @@ expected_secondary_dns = input(" Enter Secondary DNS in format #.#.#.# Example 8
 interface_name = input("Enter the interface name Example eth0, wlan0 ")
 dns_settings = subprocess.check_output(f"nmcli dev show {interface_name} | grep IP4.DNS", shell=True).decode("utf-8")
 
-# Extract the primary and secondary DNS values
+# Extract the primary and secondary DNS values - added if 2nd DNS not present we will set it to admin specified value to prevent false positive due to no value set
 dns_list = dns_settings.split()
 current_primary_dns = dns_list[1]
 if len(dns_list) > 2:

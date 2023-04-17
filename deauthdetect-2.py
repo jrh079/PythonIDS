@@ -78,9 +78,11 @@ while scan == "1":
              print ("Deauth Count", count)
              
              if count > 1 and scan == "1" :
+                 # You may increment count value to higher signature threshold if desired, consecutive deauths is considered positive
                  print ("Positive Deauth Singature Suspected - Multiple deauths")
                  print ("running 10 second packet capture via tshark command, output to /home/kali/temp/deauthtrafficcapture")
-                 os.system(command2)                 
+                 os.system(command2)        
+                 # Command 2 runs tshark capture
                  scan = input("Enter 1 for capture traffic file, 2 for batch scan mode or 3 for end process >> ")
              if scan == "2" :
                  print ("Batch Scan Mode ")

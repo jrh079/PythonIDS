@@ -71,27 +71,28 @@ while scan == "1":
         global scan
         global reauthcount
         global monitorssid
-        #Look for Consecurtive Beacon Flood Requests
+        #Look for Consecutive Beacon Flood Requests
        
                
         if packet.haslayer(Dot11Beacon):
             ssid = packet.getlayer(Dot11Elt).info.decode()
             # Look for Beacon Packets and SSID:
-            #packet.show()
+            # packet.show()    
+            # Packet show can show details in long format if you like, prefer method bellow to show specific stats were intrested in
             if ssid == monitorssid:
                  print ('Beacon Requests Found for your Entered SSID', monitorssid)
                  print (packet[Dot11Beacon].network_stats())
                  #print(ssid + " (" + bssid + ") on channel " + str(channel) + crypto)
                                
                  count += 1
-                 #increment and return count via print to screen
+                 # increment and return count via print to screen
                  print ("Beacons Count ", count)
                  packets = sniff(iface=interface, filter="type mgt subtype beacon", timeout=5)  
                  unique_macs = set ()
                  for packet in packets:
                      unique_macs.add(packet.addr2)
                  num_unique_macs = len(unique_macs)
-                 
+                 # You can set number of uninque Macs for signature and then capture - Command 2 runs tshark capture                
                  if num_unique_macs > 50:
                      print ("***Positive Beacon Singature Suspected - 50+ Unique Beacons Detected***")
                      print("***Beacon flood detected - {} unique MAC addresses".format(num_unique_macs))
@@ -108,3 +109,4 @@ while scan == "1":
 
     sniff(iface=interface,prn=sniffReq, filter="type mgt subtype beacon", timeout=capturetimeout)   
     os.system(command3)
+    #Command 3 - sets permissions on capture output file to make it easier to work with.

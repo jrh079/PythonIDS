@@ -32,7 +32,8 @@ Adtl Tips:
 
 If Using Virtual Machine like Virtual Box, I found that only a USB wireless device will work for monitor mode / packet.  If running native hardware this should
 not be a problem.  I used an AWUS1900 which worked great.  The Pen Test hardware can be a spare laptop, desktop with wireless adapter etc.  Recomend using Kali for
-this as well since you will have many tools readily availble.  
+this as well since you will have many tools readily availble.  Please refrence this resource for how to setup in a VirtualBox VM session:
+https://docs.alfa.com.tw/Support/Kali_Linux/Running_Kali_Linux_in_VirtualBox/
 
 Use command "ifconfig" to determine your wireless interface
 

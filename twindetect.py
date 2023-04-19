@@ -23,6 +23,11 @@ os.system("airmon-ng start wlan0")
 os.system("service NetworkManager start")
 os.system("service wpa_supplicant start")
 
+
+print('###########################')
+print('#### Evil Twin-Detect  ####')
+print('###########################')
+
 AP_MACs = set()
 
 def check_packet(packet):
@@ -33,7 +38,7 @@ def check_packet(packet):
                 AP_MACs.add(packet.addr2)
                 print(f"New AP found: {packet.info.decode()} with MAC address {packet.addr2}")
             else:
-                print(f"Adress already in List {packet.addr2}. Please verify MAC Address matches valid AP list")
+                print(f"Adress already in List {packet.addr2}. Verify MAC Address is a valid AP / MAC ")
         elif packet.type == 2 and packet.subtype == 0:
             # This is a data frame
             if packet.addr2 in AP_MACs and packet.addr1 not in AP_MACs:

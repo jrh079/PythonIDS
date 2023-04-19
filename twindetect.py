@@ -25,8 +25,11 @@ def check_packet(packet):
                 AP_MACs.add(packet.addr2)
                 print(f"New AP found: {packet.info.decode()} with MAC address {packet.addr2}")
         elif packet.type == 2 and packet.subtype == 0:
-            # Check mgmt / Beacon Frames
+            # This is a data frame
             if packet.addr2 in AP_MACs and packet.addr1 not in AP_MACs:
-                print(f"Evil Twin Rogue AP detected! A client with MAC address {packet.addr2} connected to {packet.info.decode()} with MAC address {packet.addr1} which is not in our list of known APs.")
+                if packet.haslayer(Dot11Elt) and packet.getlayer(Dot11Elt).ID == 0 and packet.getlayer(Dot11Elt).info:
+                    print(f"Evil Twin Rogue AP detected! A client with MAC address {packet.addr2} connected to {packet.getlayer(Dot11Elt).info.decode()} with MAC address {packet.addr1} which is not in our list of known APs.")
 
-sniff(iface="wlan0", prn=check_packet)
+
+sniff(iface="wlan0", prn=check_packet, timeout=30)
+#Set Timeout for Loop in seconds with timeout value.

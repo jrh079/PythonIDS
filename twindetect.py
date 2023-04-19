@@ -24,6 +24,8 @@ def check_packet(packet):
             if packet.addr2 not in AP_MACs:
                 AP_MACs.add(packet.addr2)
                 print(f"New AP found: {packet.info.decode()} with MAC address {packet.addr2}")
+            else:
+                print(f"Duplicate AP MAC address detected: {packet.addr2}. Possible rogue AP! Please verify MAC Address")
         elif packet.type == 2 and packet.subtype == 0:
             # This is a data frame
             if packet.addr2 in AP_MACs and packet.addr1 not in AP_MACs:

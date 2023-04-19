@@ -5,6 +5,14 @@ Created on Tue Mar 28 22:46:36 2023
 
 @author: James Harmon
 License Info: https://github.com/jrh079/PythonIDS/blob/add-license-1/LICENSE
+
+This module is in early testing phase and needs work, we are able to build a list of AP's and check against the list and print when duplicates found
+Ideally Admin creates a valid AP white List and then we would work from that, for home enviroments with one AP any new MAC showing up would be a clear
+indicator of a rouge AP / Possible Evil twin attack, partiucularly if you notice connection is unsecure.  Our instructions file has a link to a website
+with instructions on using dnsmasq and airbase-ng.  These tools and directions are all at your own risk and for educational purposes only.  The idea is
+we want to build a module that can detect rogue AP's when the appear as a useful tool.  The other modules have all been vetted in my labs in a limited
+testing environment, they are for research and learning purposes as well.  Please feel free to test and enhance code as you like.  Please post if you have
+any contributions or improvements and share what you learn and find out.  Thanks!
 """
 
 from scapy.all import *

@@ -43,6 +43,9 @@ python3 can call each module individually for testing, example "python3 deauthde
 
 scapy can be loaded using "pip install scapy" or "sudo apt install scapy"
 
+I also found an excellent tutorial and tested setup of an Evil Twin in my lab to test the new module which is in early testing to see if we can do detections:
+https://thecybersecurityman.com/2018/08/11/pentest-edition-creating-an-evil-twin-or-fake-access-point-using-aircrack-ng-and-dnsmasq-part-1-setup/
+
 Enjoy your Lab Experiments.  
 
 
